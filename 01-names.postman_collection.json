@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "35d29345-0d5b-4095-94f1-55453de68bb5",
+		"name": "01-names",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41480615"
+	},
+	"item": [
+		{
+			"name": "createName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Karla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}:{{port}}/api/v1/names",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNames",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}:{{port}}/api/v1/names?start=kar",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"names"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "kar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateName",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "deleteName",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "clearNames",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
